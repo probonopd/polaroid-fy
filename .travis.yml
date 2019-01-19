@@ -13,7 +13,7 @@ script:
   - rm squashfs-root/imagemagick.desktop
   - wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
   - chmod +x ./appimagetool-x86_64.AppImage
-  - ./appimagetool-x86_64.AppImage squashfs-root/
+  - ./appimagetool-x86_64.AppImage -g squashfs-root/
 
 after_success:
   - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
