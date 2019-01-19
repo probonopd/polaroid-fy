@@ -9,16 +9,7 @@ script:
   - cp polaroid-fy squashfs-root/usr/bin/
   - chmod +x squashfs-root/usr/bin/polaroid-fy
   - sed -i -e 's|usr/bin/magick|usr/bin/polaroid-fy|g' squashfs-root/AppRun
-  - cat > squashfs-root/polaroid-fy.desktop <<\EOF
-  - [Desktop Entry]
-  - Name=polaroid-fy
-  - Type=Application
-  - Exec=polaroid-fy
-  - Icon=imagemagick
-  - Comment=Create, edit, compose, or convert bitmap images
-  - Categories=Graphics;
-  - Terminal=true
-  - EOF
+  - cp polaroid-fy squashfs-root/
   - rm squashfs-root/imagemagick.desktop
   - wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
   - chmod +x ./appimagetool-x86_64.AppImage
